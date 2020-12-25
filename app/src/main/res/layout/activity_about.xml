@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".AboutActivity">
+
+
+    <soup.neumorphism.NeumorphTextView
+        android:id="@+id/neumorphTextView"
+        style="@style/Widget.Neumorph.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="80dp"
+        android:text="@string/nama_kelompok"
+        android:textColor="@color/background"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/fiqih"
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/neumorphTextView">
+
+        <soup.neumorphism.NeumorphTextView
+            style="@style/Widget.Neumorph.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity=""
+            android:text="@string/fiqih_firdaus_maulana"
+            android:textColor="@color/background"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <soup.neumorphism.NeumorphTextView
+            style="@style/Widget.Neumorph.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="55dp"
+            android:gravity=""
+            android:text="@string/nim_fiqih"
+            android:textColor="@color/background"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/joe"
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fiqih">
+
+        <soup.neumorphism.NeumorphTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/joenathan_dwiki_al_afandi"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity=""
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/background"
+            style="@style/Widget.Neumorph.TextView"/>
+
+        <soup.neumorphism.NeumorphTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nim_joe"
+            android:layout_marginTop="55dp"
+            android:layout_marginStart="10dp"
+            android:gravity=""
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/background"
+            style="@style/Widget.Neumorph.TextView"/>
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/safa"
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/joe">
+
+        <soup.neumorphism.NeumorphTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/saffa"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity=""
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/background"
+            style="@style/Widget.Neumorph.TextView"/>
+
+        <soup.neumorphism.NeumorphTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nim_saffa"
+            android:layout_marginTop="55dp"
+            android:layout_marginStart="10dp"
+            android:gravity=""
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/background"
+            style="@style/Widget.Neumorph.TextView"/>
+
+    </soup.neumorphism.NeumorphCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

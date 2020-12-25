@@ -8,4 +8,12 @@
     <string name="fab">Fab</string>
     <string name="student_empty">Student Empty</string>
     <string name="student_name">Student Name</string>
+    <string name="about">about</string>
+    <string name="fiqih_firdaus_maulana">Fiqih Firdaus Maulana</string>
+    <string name="nim_fiqih">1814311051</string>
+    <string name="joenathan_dwiki_al_afandi">Joenathan Dwiki Al Afandi</string>
+    <string name="nim_joe">1814311051</string>
+    <string name="saffa">Saffa</string>
+    <string name="nim_saffa">1814311051</string>
+    <string name="nama_kelompok">Nama Kelompok :</string>
 </resources>
