@@ -24,16 +24,18 @@ class StudentAdapter(
 
     override fun onBindViewHolder(holder: StudentViewHolder, position: Int) {
         val item = listItems[position]
-        holder.textViewTitle.text = item.title
-        holder.textViewBody.text = item.body
+        holder.textViewStudent.text = item.name
+        holder.textViewNim.text = item.nim
+        holder.textViewQuote.text = item.quote
         holder.itemView.setOnClickListener {
             listener.OnItemClicked(item)
         }
     }
 
     class StudentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var textViewTitle = itemView.findViewById<TextView>(R.id.text_view_title)
-        var textViewBody = itemView.findViewById<TextView>(R.id.text_view_body)
+        var textViewStudent = itemView.findViewById<TextView>(R.id.text_view_title)
+        var textViewNim = itemView.findViewById<TextView>(R.id.tv_nim)
+        var textViewQuote = itemView.findViewById<TextView>(R.id.text_view_body)
     }
 
     interface StudentListener{

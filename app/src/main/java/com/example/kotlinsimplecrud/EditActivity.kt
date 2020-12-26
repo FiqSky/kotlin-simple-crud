@@ -29,26 +29,28 @@ class EditActivity : AppCompatActivity() {
             btn_delete.visibility = View.VISIBLE
             isUpdate = true
             student = intent.getParcelableExtra(STUDENT_EXTRA)!!
-            et_title.setText(student.title)
-            et_body.setText(student.body)
+            et_title.setText(student.name)
+            et_nim.setText(student.nim)
+            et_body.setText(student.quote)
 
-            et_title.setSelection(student.title.length)
+            et_title.setSelection(student.name.length)
 
         }
 
         btn_save.setOnClickListener {
-            val title = et_title.text.toString()
-            val body = et_body.text.toString()
+            val name = et_title.text.toString()
+            val nim = et_nim.text.toString()
+            val quote = et_body.text.toString()
 
-            if (title.isEmpty() && body.isEmpty()){
+            if (name.isEmpty() && nim.isEmpty() && quote.isEmpty()){
                 Toast.makeText(applicationContext, "Student cannot be empty", Toast.LENGTH_SHORT).show()
             }
             else{
                 if (isUpdate){
-                    saveStudent(Student(id = student.id, title = title, body = body))
+                    saveStudent(Student(id = student.id, name = name, nim = nim, quote = quote))
                 }
                 else{
-                    saveStudent(Student(title = title, body = body))
+                    saveStudent(Student(name = name, nim = nim, quote = quote))
                 }
             }
 

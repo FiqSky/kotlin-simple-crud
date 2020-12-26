@@ -14,6 +14,7 @@ data class Student(
     //PrimaryKey annotation to declare primary key
     //ColumnInfo annotation to specify the column's name
     @PrimaryKey(autoGenerate = true)@ColumnInfo(name = "id") var id: Int = 0,
-    @ColumnInfo(name = "title") var title: String = "",
-    @ColumnInfo(name = "body") var body: String = ""
+    @ColumnInfo(name = "name") var name: String = "",
+    @ColumnInfo(name = "nim") var nim: String = "",
+    @ColumnInfo(name = "qoute") var quote: String = ""
 ) : Parcelable
