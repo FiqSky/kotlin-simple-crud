@@ -13,7 +13,7 @@
         style="@style/Widget.Neumorph.TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="80dp"
+        android:layout_margin="85dp"
         android:text="@string/nama_kelompok"
         android:textColor="@color/background"
         android:textSize="30sp"
