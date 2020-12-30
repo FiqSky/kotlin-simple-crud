@@ -42,7 +42,7 @@ class EditActivity : AppCompatActivity() {
             val nim = et_nim.text.toString()
             val quote = et_body.text.toString()
 
-            if (name.isEmpty() && nim.isEmpty() && quote.isEmpty()){
+            if (name.isEmpty() && nim.isEmpty()){
                 Toast.makeText(applicationContext, "Student cannot be empty", Toast.LENGTH_SHORT).show()
             }
             else{
@@ -53,7 +53,6 @@ class EditActivity : AppCompatActivity() {
                     saveStudent(Student(name = name, nim = nim, quote = quote))
                 }
             }
-
             finish()
         }
 
@@ -61,7 +60,6 @@ class EditActivity : AppCompatActivity() {
             deleteStudent(student)
             finish()
         }
-
     }
 
     private fun saveStudent(student: Student){

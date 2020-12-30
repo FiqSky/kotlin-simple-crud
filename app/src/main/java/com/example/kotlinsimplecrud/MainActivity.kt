@@ -1,11 +1,11 @@
 package com.example.kotlinsimplecrud
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlinsimplecrud.adapter.StudentAdapter
 import com.example.kotlinsimplecrud.db.StudentRoomDatabase
@@ -17,13 +17,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        
         getStudentData()
 
         fab.setOnClickListener {
             startActivity(Intent(this, EditActivity::class.java))
         }
-
     }
 
     private fun getStudentData(){
@@ -49,7 +48,6 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             })
-
             layoutManager = LinearLayoutManager(this@MainActivity)
         }
     }
