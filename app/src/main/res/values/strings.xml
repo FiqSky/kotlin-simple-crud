@@ -8,7 +8,7 @@
     <string name="fab">Fab</string>
     <string name="student_empty">Student Empty</string>
     <string name="student_name">Student Name</string>
-    <string name="about">about</string>
+    <string name="about">About</string>
     <string name="fiqih_firdaus_maulana">Fiqih Firdaus Maulana</string>
     <string name="nim_fiqih">1814311051</string>
     <string name="joenathan_dwiki_al_afandi">Joenathan Dwiki Al Afandi</string>
@@ -20,4 +20,11 @@
     <string name="jo">Joenathan Dwiki Al Afandi - 1814311034</string>
     <string name="saf">Annuril Rahma Safa Ati - 1814311019</string>
     <string name="nim">NIM</string>
+    <string name="sign_in_with_google">Sign in With Google</string>
+    <string name="id">ID</string>
+    <string name="example">example</string>
+    <string name="name">NAME</string>
+    <string name="email_address">EMAIL</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="profile">Profile</string>
 </resources>
