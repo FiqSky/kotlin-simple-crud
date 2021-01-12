@@ -62,11 +62,11 @@ class EditActivity : AppCompatActivity() {
             val builder = AlertDialog.Builder(this)
             builder.setMessage("Are you sure you want to Delete?")
                     .setCancelable(false)
-                    .setPositiveButton("Yes") { _: DialogInterface, i: Int ->
+                    .setPositiveButton("Yes") { _: DialogInterface, _: Int ->
                         deleteStudent(student)
                         finish()
                     }
-                    .setNegativeButton("No") { dialogInterface: DialogInterface, i: Int ->
+                    .setNegativeButton("No") { dialogInterface: DialogInterface, _: Int ->
                         // Dismiss the dialog
                         dialogInterface.dismiss()
                     }
