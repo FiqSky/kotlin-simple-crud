@@ -1,9 +1,11 @@
 package com.example.kotlinsimplecrud
 
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.kotlinsimplecrud.db.StudentDao
 import com.example.kotlinsimplecrud.db.StudentRoomDatabase
 import com.example.kotlinsimplecrud.model.Student
@@ -57,8 +59,19 @@ class EditActivity : AppCompatActivity() {
         }
 
         btn_delete.setOnClickListener {
-            deleteStudent(student)
-            finish()
+            val builder = AlertDialog.Builder(this)
+            builder.setMessage("Are you sure you want to Delete?")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes") { _: DialogInterface, i: Int ->
+                        deleteStudent(student)
+                        finish()
+                    }
+                    .setNegativeButton("No") { dialogInterface: DialogInterface, i: Int ->
+                        // Dismiss the dialog
+                        dialogInterface.dismiss()
+                    }
+            val alert = builder.create()
+            alert.show()
         }
     }
 
