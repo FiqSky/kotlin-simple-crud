@@ -1,15 +1,16 @@
 package com.example.kotlinsimplecrud
 
 import android.content.DialogInterface
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlinsimplecrud.db.StudentDao
 import com.example.kotlinsimplecrud.db.StudentRoomDatabase
 import com.example.kotlinsimplecrud.model.Student
-import kotlinx.android.synthetic.main.activity_edit.*
 
 class EditActivity : AppCompatActivity() {
 
@@ -24,6 +25,11 @@ class EditActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit)
 
+        val btn_delete = findViewById<Button>(R.id.btn_delete)
+        val btn_save = findViewById<Button>(R.id.btn_save)
+        val et_body = findViewById<EditText>(R.id.et_body)
+        val et_nim = findViewById<EditText>(R.id.et_nim)
+        val et_title = findViewById<EditText>(R.id.et_title)
         database = StudentRoomDatabase.getDatabase(applicationContext)
         dao = database.getStudentDao()
 
@@ -35,7 +41,7 @@ class EditActivity : AppCompatActivity() {
             et_nim.setText(student.nim)
             et_body.setText(student.quote)
 
-            et_title.setSelection(student.name.length)
+            student.name?.let { et_title.setSelection(it.length) }
 
         }
 

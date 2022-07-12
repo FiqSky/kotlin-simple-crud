@@ -5,12 +5,14 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlinsimplecrud.adapter.StudentAdapter
 import com.example.kotlinsimplecrud.db.StudentRoomDatabase
 import com.example.kotlinsimplecrud.model.Student
-import kotlinx.android.synthetic.main.activity_main.*
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         
         getStudentData()
 
+        val fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
             startActivity(Intent(this, EditActivity::class.java))
         }
@@ -29,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         val database = StudentRoomDatabase.getDatabase(applicationContext)
         val dao = database.getStudentDao()
         val listItems = arrayListOf<Student>()
+        val tv_empty = findViewById<TextView>(R.id.tv_empty)
+
         listItems.addAll(dao.getAll())
         setupRecyclerView(listItems)
         if (listItems.isNotEmpty()){
@@ -40,6 +45,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView(listItems: ArrayList<Student>){
+        val rv_main = findViewById<RecyclerView>(R.id.rv_main)
         rv_main.apply {
             adapter = StudentAdapter(listItems, object : StudentAdapter.StudentListener{
                 override fun OnItemClicked(student: Student) {
